@@ -1,0 +1,37 @@
+
+integritate - nu se poate modifica mesajul
+
+PPT
+  probabilist - are acces la date aleatoare si le fol in program;
+    eg. trb sa ghicest o cheie(dau cu zarul/moneda si aleg ceva)
+  polinomial - termina in timp util(e.g. o zi, 2, un an)
+  
+  cand dau cu banul: prob succes =  (1/2)^n
+  
+forta bruta - iau si testez toate variantele
+  for (k = 0; k <= 2^l - 1) { ... } 
+  
+  prob succes: 1
+  
+  
+sec computationala vs perfecta(OTP; oricat de multe resurse, nu se poate sparge)
+  in practica nu e nevoie de perf, pt ca forta bruta nu o sa fie eficienta pt o cheie de 128 de bits(spre ex)
+  OTP - cosmar cu management ul de chei
+  
+fn neglijabila
+  - e ceva f f mic
+  - 1/pol -> nu e neglijabil
+  
+  p = 1/256 - trb rulat de 256 de ori ca in medie sa fie 1 -> neglijabil
+  p = 1/n^2 - nu e neglijabil
+  p = 1/2^128 - fn neglijabila(exponential)
+  
+ + 2 fn neglijabile -> rez neglijabil
+ 
+ nelg + nenegl = rez va fi de la cel care are prob mare de succes -> neneglijabil
+  
+HW:
+ 3, 4, 5, 6
+
+probabilistic polynomial alg = alg that runs in polynomial time and uses randomness
+  (https://crypto.stackexchange.com/a/40060)
