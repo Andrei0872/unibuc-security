@@ -1,0 +1,29 @@
+
+whaling - special target: directori, loctiitor
+phishing - bulk
+spear phishing - ca la whaling, doar ca pe companii/cat sociale
+spoofing - pacalim pe cineva ca suntem altcineva
+
+certificat: cheia publica legata de o org
+
+SPF:
+  * lista(whitelist) de IP-uri; daca nu apare lista -> SPAM
+  
+DKIM:
+  * semnatura digitala
+  
+RSA: pt cifrare/semnatura
+  gen 2 nr prime mari, p, q; n = p * q
+                                 phi(n)
+  e = 3(sau =2^16 + 1); (e, (p - 1)(q - 1)) = 1
+  d = e^-1(phi(n)) -> de = 1(modulo phin(n)); d*e - 1 = K*phi(n);(K = clasa)
+  
+  fn hash: {0, 1}^* -> Z
+  
+  PK = (n, e)
+  SK = (p, q, d)
+  
+  semnare: H(M)^d = semnatura(modulo N); semnatura = (M, r)
+  pt verificare: H(M) congruent semnatura^e(modulo NN)
+  
+  H(M)^de = H(M)^(1 + k*phi(n))
