@@ -1,0 +1,36 @@
+
+cifruri(sau cifre?):
+
+flux:
+
+* flexibil cu dimensiunea input ului
+
+block:
+
+* input dimensiune fixa
+* AES
+* keys length: 128, 256
+
+LFSR:
+
+* 6 cells: 2^6 - 1 posibilitati(am perioada maxima)
+* registru de date
+* nu ok pt cifrare: daca stiu unde sunt XOR urile, daca stiu output ul, pot ajunge la starea interna
+* bun pt simulari(gen nr random)
+* avantaj: stare interna
+
+AES:
+
+* input uri egale
+
+* pt fiecare mesaj, aleg un IV diferit; IV = vector de initializare
+* CBC - cipher block chaining
+
+CBC:
+
+* downsides
+  - nu pot procesa block uri in paralel; sol: CBC cu counter(CTR)
+  - trb ales vectorul de init in mod aleator
+
+ECB:
+* P1 -> Ek -> C1
