@@ -66,7 +66,8 @@ def compare_sequences (seq1, seq2):
 https://justcryptography.com/how-to-create-secure-keys-for-symmetric-encryption/
 """
 def generate_encryption_key ():
-  return secrets.randbits(100)
+  # 8 chars must be encrypted. 1 char = 8 bits -> 800 bits in total.
+  return secrets.randbits(800)
 
 """
 The passwords must be securely stored. Encryption is not a good candidate for that
